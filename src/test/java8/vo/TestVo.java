@@ -9,6 +9,9 @@ public class TestVo {
     private double speed;
     private String name;
 
+    public TestVo() {
+    }
+
     public TestVo(Integer maxCapacity, double speed) {
         this.maxCapacity = maxCapacity;
         this.speed = speed;
