@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
- * java8线程日期转换类-线程安全
+ * java8线程日期转换类-新旧对比-线程安全
  *
  * @Author chenxiangge
  * @Date 2020/10/16
