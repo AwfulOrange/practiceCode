@@ -1,7 +1,5 @@
 package test.juc;
 
-import sun.applet.AppletResourceLoader;
-
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -21,12 +19,12 @@ import java.util.concurrent.locks.ReentrantLock;
 class SynchronizedLockDemoShareData {
     //线程标志位
     private int num = 1;//1-A 2-B 3-C
-    private Lock lock = new ReentrantLock();
+    private final Lock lock = new ReentrantLock();
 
     // Where a Lock replaces the use of synchronized methods and statements, a Condition replaces the use of the Object monitor methods.
-    private Condition c1 = lock.newCondition();
-    private Condition c2 = lock.newCondition();
-    private Condition c3 = lock.newCondition();
+    private final Condition c1 = lock.newCondition();
+    private final Condition c2 = lock.newCondition();
+    private final Condition c3 = lock.newCondition();
 
     public void print5() {
         lock.lock();

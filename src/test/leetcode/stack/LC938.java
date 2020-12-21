@@ -9,7 +9,7 @@ import java.util.Stack;
  */
 public class LC938 {
     class Solution {
-        private HashMap<Character, Character> mappings;
+        private final HashMap<Character, Character> mappings;
         public Solution() {
             this.mappings = new HashMap<>();
             this.mappings.put(')', '(');

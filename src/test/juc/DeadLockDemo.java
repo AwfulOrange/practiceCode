@@ -9,8 +9,8 @@ package test.juc;
  * 若无外力干涉那它们将无法推进下去
  */
 class HoldLockThread implements Runnable {
-    private String lockA;
-    private String lockB;
+    private final String lockA;
+    private final String lockB;
 
     public HoldLockThread(String lockA, String lockB) {
         this.lockA = lockA;

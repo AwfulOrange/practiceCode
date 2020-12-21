@@ -4,7 +4,6 @@ import test.java8.vo.TestVo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.IntSummaryStatistics;
 import java.util.List;
@@ -12,7 +11,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @Author chenxiangge
@@ -40,17 +38,17 @@ public class StreamTest3 {
          * reduce:归约
          *
          */
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);
 
-        Integer sum = list.stream().reduce(0,(x,y)->x+y);
+        Integer sum = list.stream().reduce(0, (x, y) -> x + y);
         System.out.println(sum);
 
         /**
          * map-reduce 模式
          */
-        TestVo testVo = new TestVo(1,2);
-        TestVo testVo2 = new TestVo(1,3.3);
-        TestVo testVo3 = new TestVo(3,4.4);
+        TestVo testVo = new TestVo(1, 2);
+        TestVo testVo2 = new TestVo(1, 3.3);
+        TestVo testVo3 = new TestVo(3, 4.4);
 
         List<TestVo> testVos = new ArrayList<>();
         testVos.add(testVo);
@@ -120,9 +118,9 @@ public class StreamTest3 {
         Map<Integer, Map<String, List<TestVo>>> multiGroup = testVos
                 .stream()
                 .collect(Collectors.groupingBy(TestVo::getMaxCapacity, Collectors.groupingBy((testVo1 -> {
-                    if(testVo1.getSpeed()>3){
+                    if (testVo1.getSpeed() > 3) {
                         return "高速";
-                    }else {
+                    } else {
                         return "低速";
                     }
                 }))));
@@ -155,5 +153,7 @@ public class StreamTest3 {
         System.out.println(joinStr);
 
     }
+
+
 
 }

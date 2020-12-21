@@ -1,8 +1,5 @@
 package test.juc;
 
-import test.leetcode.java8.delayList.MyLinkedList;
-import test.leetcode.proxy.Obj;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.locks.ReentrantLock;
@@ -23,8 +20,8 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  */
 
 class MyCache {
-    private volatile Map<String, Object> map = new HashMap<>();
-    private ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock();
+    private final Map<String, Object> map = new HashMap<>();
+    private final ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock();
 
     /**
      * 缓存框架基本操作
@@ -70,14 +67,14 @@ public class ReadWriteLockDemo {
             final String tempI = String.valueOf(i);
             new Thread(() -> {
                 cache.put(tempI, tempI);
-            }, String.valueOf(i) + " write").start();
+            }, i + " write").start();
 
         }
         for (int i = 0; i < 5; i++) {
             final String tempI = String.valueOf(i);
             new Thread(() -> {
                 cache.get(tempI);
-            }, String.valueOf(i) + " read").start();
+            }, i + " read").start();
 
         }
     }

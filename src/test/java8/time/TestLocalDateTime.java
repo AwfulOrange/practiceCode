@@ -93,6 +93,9 @@ public class TestLocalDateTime {
 
         testZoneDate();
 //        testDateTimeFormatter();
+        LocalDateTime time = LocalDateTime.now();
+        time.getDayOfWeek();
+
 
 
     }

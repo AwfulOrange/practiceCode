@@ -1,0 +1,140 @@
+ //********************* 使用javap反编译后的类文件信息   ********************* //
+
+Classfile /Users/ChenXiangge/Documents/leetcode/out/production/leetcode/test/jvm/JavapTest.class //字节码文件所属路径
+  Last modified 2020-11-26; size 635 bytes                                                       //最后修改时间，字节码文件大小
+  MD5 checksum 42c692843d895ea481a2ab73cc4f11e4                                                  //md5散列值
+  Compiled from "JavapTest.java"                                                                 //源文件名称
+public class test.jvm.JavapTest
+  minor version: 0                                                                               //副版本
+  major version: 52                                                                              //主版本
+  flags: ACC_PUBLIC, ACC_SUPER                                                                   //访问标识
+  //********************* 常量池   ********************* //
+Constant pool:
+   #1 = Methodref          #7.#30         // java/lang/Object."<init>":()V
+   #2 = String             #31            // java
+   #3 = Fieldref           #6.#32         // test/jvm/JavapTest.info:Ljava/lang/String;
+   #4 = Fieldref           #6.#33         // test/jvm/JavapTest.flag:Z
+   #5 = String             #34            // baidu.com
+   #6 = Class              #35            // test/jvm/JavapTest
+   #7 = Class              #36            // java/lang/Object
+   #8 = Utf8               num
+   #9 = Utf8               I
+  #10 = Utf8               flag
+  #11 = Utf8               Z
+  #12 = Utf8               gender
+  #13 = Utf8               C
+  #14 = Utf8               info
+  #15 = Utf8               Ljava/lang/String;
+  #16 = Utf8               COUNTS
+  #17 = Utf8               ConstantValue
+  #18 = Integer            1
+  #19 = Utf8               <init>
+  #20 = Utf8               ()V
+  #21 = Utf8               Code
+  #22 = Utf8               LineNumberTable
+  #23 = Utf8               LocalVariableTable
+  #24 = Utf8               this
+  #25 = Utf8               Ltest/jvm/JavapTest;
+  #26 = Utf8               (Z)V
+  #27 = Utf8               <clinit>
+  #28 = Utf8               SourceFile
+  #29 = Utf8               JavapTest.java
+  #30 = NameAndType        #19:#20        // "<init>":()V
+  #31 = Utf8               java
+  #32 = NameAndType        #14:#15        // info:Ljava/lang/String;
+  #33 = NameAndType        #10:#11        // flag:Z
+  #34 = Utf8               baidu.com
+  #35 = Utf8               test/jvm/JavapTest
+  #36 = Utf8               java/lang/Object
+  //********************* 常量池   ********************* //
+
+  //********************* 字段表集合   ********************* //
+  //字段名
+  //字段描述符：字段类型
+  //字段访问标识
+{
+  private int num;
+    descriptor: I
+    flags: ACC_PRIVATE
+
+  boolean flag;
+    descriptor: Z
+    flags:
+
+  protected char gender;
+    descriptor: C
+    flags: ACC_PROTECTED
+
+  public java.lang.String info;
+    descriptor: Ljava/lang/String;
+    flags: ACC_PUBLIC
+
+  public static final int COUNTS;
+    descriptor: I
+    flags: ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    ConstantValue: int 1
+  //*********************   方法表集合   ********************* //
+
+  //<init> - 构造器
+  public test.jvm.JavapTest();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: ldc           #2                  // String java
+         7: putfield      #3                  // Field info:Ljava/lang/String;
+        10: return
+      LineNumberTable:
+        line 22: 0
+        line 19: 4
+        line 23: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Ltest/jvm/JavapTest;
+
+  public test.jvm.JavapTest(boolean);
+    descriptor: (Z)V //方法描述符，形参列表，返回值
+    flags: ACC_PUBLIC //方法访问标识别
+    Code:
+      stack=2, locals=2, args_size=2 //stack:操作数栈最大深度 locals:局部变量表长度 arg_size:方法接受参数的个数（无参=1 有n个参数=n+1）
+    //偏移量：操作码       操作数/(字符串常量池索引)
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: ldc           #2                  // String java
+         7: putfield      #3                  // Field info:Ljava/lang/String;
+        10: aload_0
+        11: iload_1
+        12: putfield      #4                  // Field flag:Z
+        15: return
+   //行号表：指明字节码指令的偏移量与java源程序中代码行号的对应关系
+      LineNumberTable:
+        line 25: 0
+        line 19: 4
+        line 26: 10
+        line 27: 15
+    //局部变量表
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  this   Ltest/jvm/JavapTest;
+            0      16     1  flag   Z
+
+//<clint>（对应静态代码块）
+  static {};
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=1, locals=1, args_size=0
+         0: ldc           #5                  // String baidu.com
+         2: astore_0
+         3: return
+      LineNumberTable:
+        line 15: 0
+        line 16: 3
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+}
+SourceFile: "JavapTest.java" //附加属性，指明当前字节码文件对应的源文件名

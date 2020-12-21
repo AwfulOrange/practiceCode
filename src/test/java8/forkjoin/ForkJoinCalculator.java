@@ -20,8 +20,8 @@ public class ForkJoinCalculator extends RecursiveTask<Long> {
     /**
      * 累加初始值、结束值
      */
-    private Long start;
-    private Long end;
+    private final Long start;
+    private final Long end;
 
     /**
      * 拆分大小

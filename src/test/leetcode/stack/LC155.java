@@ -8,8 +8,8 @@ import java.util.Stack;
  */
 public class LC155 {
     static class MinStack {
-        private Stack<Integer> dataStack;
-        private Stack<Integer> minStack;
+        private final Stack<Integer> dataStack;
+        private final Stack<Integer> minStack;
 
 
         /**

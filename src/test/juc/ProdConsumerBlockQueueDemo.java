@@ -15,7 +15,7 @@ class MyResource {
     //是否启动消费的flag-默认开启 进行生产和消费（高并发的程序需要保证其可见性）
     private volatile boolean FLAG = true;
     //用于消费生产的计数（高并发场景下，使用原子类型，不要使用i++/++i）
-    private AtomicInteger integer = new AtomicInteger();
+    private final AtomicInteger integer = new AtomicInteger();
 
     //适配所有阻塞队列
     BlockingQueue<String> blockingQueue = null;

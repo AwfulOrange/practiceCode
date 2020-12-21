@@ -19,7 +19,7 @@ public class LC1116 {
         public Semaphore seam_zero = new Semaphore(1);
 
 
-        private int n;
+        private final int n;
 
         public ZeroEvenOdd(int n) {
             this.n = n;

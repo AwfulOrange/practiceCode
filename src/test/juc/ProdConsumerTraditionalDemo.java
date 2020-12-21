@@ -24,9 +24,9 @@ class ShareData { // 资源类
     /**
      * 多线程编程，必定涉及资源类的争抢，需要加锁来保证资源的同步。
      */
-    private Lock lock = new ReentrantLock();
+    private final Lock lock = new ReentrantLock();
     //??这个是什么
-    private Condition condition = lock.newCondition();
+    private final Condition condition = lock.newCondition();
 
     public void increment() throws Exception {
         lock.lock();

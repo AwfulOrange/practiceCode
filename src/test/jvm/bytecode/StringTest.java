@@ -6,7 +6,7 @@ package test.jvm.bytecode;
  */
 public class StringTest {
     public static void main(String[] args) {
-        String helloworld = new String("hello")+new String("World");
+        String helloworld = "hello" + "World";
         String hello2  = "helloWorld";
         System.out.println(hello2.intern() == helloworld.intern());
 

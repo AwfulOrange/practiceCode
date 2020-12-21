@@ -52,7 +52,7 @@ public class TestMethodRef {
 
 
         //Class::new
-        Supplier<String> stringSupplier = () -> new String();
+        Supplier<String> stringSupplier = () -> "";
         //运行的方法自动匹配函数式接口的抽象方法的参数-此处匹配的是无参构造器
         Supplier<String> stringSupplier1 = String::new;
 

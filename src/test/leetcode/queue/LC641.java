@@ -7,7 +7,7 @@ package test.leetcode.queue;
 public class LC641 {
     static class MyCircularDeque {
         private int size = 0;
-        private int[] queue;
+        private final int[] queue;
         private int head = 0;
         private int tail = 0;
 

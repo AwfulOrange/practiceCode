@@ -12,8 +12,8 @@ public class LC1117 {
         public H2O() {
         }
 
-        private Semaphore h = new Semaphore(2);
-        private Semaphore o = new Semaphore(1);
+        private final Semaphore h = new Semaphore(2);
+        private final Semaphore o = new Semaphore(1);
 
         public void hydrogen(Runnable releaseHydrogen) throws InterruptedException {
             h.acquire(1);

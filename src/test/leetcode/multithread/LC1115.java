@@ -8,10 +8,10 @@ import java.util.concurrent.Semaphore;
  */
 public class LC1115 {
     static class FooBar {
-        private int n;
-        private Semaphore foo_bar = new Semaphore(0);
+        private final int n;
+        private final Semaphore foo_bar = new Semaphore(0);
         //初始化为1，保证起始字符串为foo
-        private Semaphore bar_foo = new Semaphore(1);
+        private final Semaphore bar_foo = new Semaphore(1);
 
 
         public FooBar(int n) {

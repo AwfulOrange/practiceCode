@@ -10,7 +10,7 @@ public class LC622 {
         private int head = 0;//头部数据所在数组位置
         private int tail = 0;//尾部数据所在数组位置
         private int size;
-        private int[] queue;
+        private final int[] queue;
 
         /**
          * Initialize your data structure here. Set the size of the queue to be k.

@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class LC13 {
     static class Solution {
-        private static Map<String, Integer> map = new HashMap<String, Integer>() {{
+        private static final Map<String, Integer> map = new HashMap<String, Integer>() {{
             put("I", 1);
             put("V", 5);
             put("X", 10);
