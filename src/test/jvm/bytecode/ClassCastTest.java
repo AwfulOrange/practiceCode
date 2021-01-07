@@ -7,6 +7,7 @@ package test.jvm.bytecode;
 public class ClassCastTest {
     public static void main(String[] args) {
         UpCast();
+        downCast3();
     }
 
     //精度丢失问题
@@ -24,5 +25,13 @@ public class ClassCastTest {
         int i = b;
         long j = b;
         double d = b;
+    }
+
+    //窄化类型转换精度损失
+    public static void downCast3(){
+        int i =128;
+        //-128
+        byte b = (byte) i;
+        System.out.println(b);
     }
 }
