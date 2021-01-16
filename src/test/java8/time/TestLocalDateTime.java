@@ -11,6 +11,7 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Set;
 
@@ -26,6 +27,8 @@ public class TestLocalDateTime {
     //3、Duration 计算两个时间之间的间隔
     //4、Period 计算两个日期之间的间隔
     public static void main(String[] args) {
+        checkRange();
+
         LocalDateTime now = LocalDateTime.now();
         System.out.println(now);
 
@@ -141,6 +144,15 @@ public class TestLocalDateTime {
         //带偏移量 带时区的时间
         ZonedDateTime zonedDateTime = now.atZone(ZoneId.of("SystemV/AST4"));
         System.out.println(zonedDateTime);
+    }
+
+
+    private static void checkRange(){
+        LocalDate now = LocalDate.of(2021, 1, 13);;
+        LocalDateTime now1 =  LocalDateTime.of(2021, 1, 14,11,0);
+        long until = now.until(now1, ChronoUnit.DAYS);
+        System.out.println(until);
+
     }
 
 
