@@ -2,6 +2,7 @@ package test.java8.anno;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
+import java.util.HashSet;
 
 /**
  * @Author chenxiangge
@@ -12,7 +13,6 @@ public class TestAnnosExample {
     @TestAnno("hello")
     @TestAnno("world")
     public static void test(){
-
     }
 
     public static void main(String[] args) throws NoSuchMethodException {

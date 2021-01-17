@@ -56,14 +56,19 @@ class Phone implements Runnable {
 }
 
 /**
- * 线程可以进入任何一个它已经拥有的锁(同一个锁)所同步着的代码块
+ * 同一个线程外层函数获取锁之后，内层递归函数仍能获取锁的代码
+ * 同一个线程在外层方法获取锁的时候，进入内层方法会自动获取锁
+ *
+ * e.g.进入了大门之后（外层加锁方法）进入里面的房间不需要再获取锁（内层方法）
+ *
+ * 线程可以进入任何一个它已经拥有的锁(同一个锁)所同步着的代码块？
  * <p>
  * t1	 invoked sendSMS  t1线程在外层获取锁的时候
  * t1	 ########## invoked sendEmail 在进入内层方法会自动获取锁
  * t2	 invoked sendSMS
  * t2	 ########## invoked sendEmail
  */
-public class ReenterLockDemo {
+public class ReentrantLockDemo {
 
     public static void main(String[] args) {
         Phone phone = new Phone();
