@@ -32,6 +32,7 @@ class Phone implements Runnable {
     public void get() {
         //无论加几把锁，只要配对均可执行
         //若锁不配对，则会造成程序卡死
+        //上一个线程没有正确释放锁，下一个线程无法获得锁
         lock.lock();
         lock.lock();
         try {
