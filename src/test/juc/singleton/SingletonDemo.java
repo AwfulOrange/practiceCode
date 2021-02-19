@@ -1,8 +1,9 @@
-package test.juc;
+package test.juc.singleton;
 
 /**
- * 单例模式在多线程下可能会存在的问题
  *
+ * 单例模式在多线程下可能会存在的问题
+ * 懒汉式(延迟加载)的单例模式
  * @Author chenxiangge
  * @Date 2020/8/11
  */
@@ -15,7 +16,7 @@ public class SingletonDemo {
 
 
     public static synchronized SingletonDemo getInstance() {
-        //普通单例模式
+        //普通单例模式-存在线程安全问题
 //        if (null == instance) {
 //            System.out.println(Thread.currentThread().getName() + "：创建了SingletonDemo");
 //            instance = new SingletonDemo();
@@ -23,6 +24,7 @@ public class SingletonDemo {
 //        return instance;
 
         //DCL double check lock模式（双端检锁机制）
+        // 一旦已经存在instance，则无需再次加锁
         // (减少加锁次数 提高性能)
         //1、first check
         if (null == instance) {
