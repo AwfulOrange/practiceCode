@@ -4,6 +4,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * 手写LRU算法
+ * 继承LinkedHashMap
+ * easy模式
  * @Author chenxiangge
  * @Date 2/18/21
  */
