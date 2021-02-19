@@ -3,7 +3,7 @@ package test.jvm.bytecode;
 /**
  * @Author chenxiangge
  * @Date 2020/10/28
- *
+ * <p>
  * 成员变量的初始化过程（按顺序）
  * 1、默认初始化
  * 2、显式初始化
@@ -45,18 +45,20 @@ class Father {
     }
 }
 
-class Son extends Father{
+class Son extends Father {
     int x = 30;
-    public Son(){
+
+    public Son() {
         //调用son的构造器前，需要调用父类的构造器
         //father调用father的print() 方法
         //son类重写了print()方法，但此时调用的时候 *x还未初始化*
         //调用的是son类的print方法
         this.print();
-        x=40;
+        x = 40;
     }
+
     @Override
-    public void print(){
-        System.out.println("son.x="+x);
+    public void print() {
+        System.out.println("son.x=" + x);
     }
 }
