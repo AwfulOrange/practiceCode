@@ -7,18 +7,6 @@ import java.util.Stack;
  * @Date 2020/4/14
  */
 public class LC445 {
-    /**
-     * Definition for singly-linked list.
-     */
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     class Solution {
         public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
             Stack<Integer> number1 = new Stack<>();
