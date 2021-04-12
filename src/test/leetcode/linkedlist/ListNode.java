@@ -5,8 +5,8 @@ package test.leetcode.linkedlist;
  * @Date 3/26/21
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
     ListNode() {
     }
