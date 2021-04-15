@@ -12,7 +12,7 @@ public class LC173 {
     private List<Integer> res = new ArrayList<>();
 
 
-    public LC173(LC094.TreeNode root) {
+    public LC173(TreeNode root) {
         if (root == null) {
             return;
         }
@@ -21,7 +21,7 @@ public class LC173 {
 
     }
 
-    private void inorder(LC094.TreeNode root, List<Integer> res) {
+    private void inorder(TreeNode root, List<Integer> res) {
         if (root == null) {
             return;
         }
