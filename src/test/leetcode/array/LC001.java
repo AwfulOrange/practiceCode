@@ -36,13 +36,13 @@ public class LC001 {
      */
     class Solution2 {
         public int[] twoSum(int[] nums, int target) {
-            Map<Integer, Integer> map = new HashMap<>();
+           Map<Integer,Integer> map = new HashMap<>();
             for (int i = 0; i < nums.length; i++) {
-                int num = target - nums[i];
-                if (map.containsKey(num)) {
-                    return new int[]{map.get(num), i};
+                int key = target - nums[i];
+                if(map.containsKey(key)){
+                   return new int[]{map.get(key),i};
                 }
-                map.put(nums[i], i);
+                map.put(nums[i],i);
             }
             //map中的值 key value
             //          2    0
